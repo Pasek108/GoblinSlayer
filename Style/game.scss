@@ -1,0 +1,93 @@
+@import "helper_mixins";
+
+.game {
+  @include position(absolute);
+  height: 100%;
+  aspect-ratio: 5/2;
+  display: none;
+  cursor: none;
+}
+
+.board {
+  @include position(absolute, 0, $zindex: 2);
+  @include flex(column, center, flex-start);
+  width: 100vw;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 0 0 0;
+  display: none;
+  transition: background 2s, padding 4s;
+
+  &.game-over {
+    background: black;
+    height: 100vh;
+    padding-top: 35vh;
+
+    .game-over,
+    .option {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .how-to-play {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .how-to-play {
+    @include position(fixed, $bottom: 1.5rem);
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    font-family: "Grenze Gotisch", cursive;
+    font-size: 1.5rem;
+    color: gray;
+    visibility: visible;
+    opacity: 1;
+    transition: 2s;
+
+    div {
+      width: 100%;
+      font-family: "Grenze Gotisch", cursive;
+      font-size: 1.5rem;
+    }
+
+    .key {
+      @include flex(column, center, center);
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .option {
+    margin-top: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: 4s;
+  }
+
+  .game-over {
+    font-family: "Grenze Gotisch", cursive;
+    font-size: 6rem;
+    margin-top: -9rem;
+    color: red;
+    visibility: hidden;
+    opacity: 0;
+    transition: 4s;
+  }
+
+  .wave,
+  .wave span {
+    font-family: "Grenze Gotisch", cursive;
+    font-size: 4rem;
+  }
+
+  .killed-goblins,
+  .killed-goblins span {
+    font-family: "Grenze Gotisch", cursive;
+    font-size: 1.5rem;
+  }
+}

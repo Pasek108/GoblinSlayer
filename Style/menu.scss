@@ -1,0 +1,108 @@
+@import "helper_mixins";
+
+.menu {
+  @include flex(column, center, center);
+  background-image: url("../Images/menu_background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mute {
+  @include position(absolute, 1rem, 1rem);
+  @include flex(column, center, center);
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #15161aaa;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background: #2f3136;
+  }
+}
+
+.title {
+  position: relative;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  font-family: "Grenze Gotisch", cursive;
+  font-size: 5rem;
+  font-weight: bold;
+  word-spacing: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.option {
+  position: relative;
+  z-index: 0;
+  width: 28rem;
+  max-width: 95%;
+  margin: 1rem auto 0.5rem auto;
+  padding: 0.5rem;
+  border: 1px solid #00000000;
+  background: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  outline: none;
+
+  &:focus,
+  &:hover,
+  &.focused {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background: #15161aaa;
+    color: #ffbb00;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      @include position(absolute, 0.45rem, $zindex: -1);
+      background: #2f3136;
+      height: 2.45rem;
+      width: 2.45rem;
+      transform-origin: center;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      left: -1.3rem;
+      border-bottom: 1px solid white;
+      border-left: 1px solid white;
+    }
+
+    &::after {
+      right: -1.3rem;
+      border-top: 1px solid white;
+      border-right: 1px solid white;
+    }
+
+    .dot-left,
+    .dot-right {
+      @include position(absolute, calc(50% - 5px));
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
+    }
+
+    .dot-left {
+      left: -5px;
+    }
+
+    .dot-right {
+      right: -5px;
+    }
+  }
+}
