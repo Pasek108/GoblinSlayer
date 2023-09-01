@@ -13,7 +13,7 @@ class Goblin {
 
     this.death_sound = new Audio("Sound/goblin_death.mp3");
     if (is_sound_muted) this.death_sound.volume = 0;
-    else this.death_sound.volume = 0.7;
+    else this.death_sound.volume = 0.5;
 
     if (this.side) {
       this.pos.x = -canvas_w / 2 - id * (400 - this.speed * 17);
@@ -57,7 +57,7 @@ class Hero {
     this.attack_timer = 0;
 
     window.addEventListener("touchstart", (e) => {
-      this.side = +(e.touches[0].clientX > window.innerWidth / 2);
+      this.side = +(e.touches[0].clientX > screen.width / 2);
     });
 
     document.addEventListener("keydown", (e) => {

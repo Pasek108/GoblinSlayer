@@ -5,6 +5,30 @@
   font-family: "Noto Serif", serif;
 }
 
+@media only screen and (max-width: 2000px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 816px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -23,6 +47,14 @@ body {
   overflow: hidden;
 }
 
+main {
+  position: relative;
+  @include flex(column, center, center);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -30,4 +62,5 @@ body {
 .snow-background {
   @include position(absolute, 0, $left: 0);
   background: #0000004d;
+  width: 100%;
 }

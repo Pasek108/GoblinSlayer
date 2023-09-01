@@ -1,7 +1,7 @@
 @import "helper_mixins";
 
 .game {
-  @include position(absolute);
+  @include position(absolute, 0);
   height: 100%;
   aspect-ratio: 5/2;
   display: none;
@@ -40,7 +40,7 @@
     @include flex(row, center, center);
     flex-wrap: wrap;
     font-family: "Grenze Gotisch", cursive;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: gray;
     visibility: visible;
     opacity: 1;
@@ -49,21 +49,23 @@
     div {
       width: 100%;
       font-family: "Grenze Gotisch", cursive;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     .key {
       @include flex(column, center, center);
-      width: 2rem;
-      height: 2rem;
+      width: 1.75rem;
+      height: 1.65rem;
       margin: 0 0.5rem;
+      padding-top: 0.1rem;
       border: 1px solid gray;
       border-radius: 0.5rem;
+      font-size: 1.25rem;
     }
   }
 
   .option {
-    margin-top: 2rem;
+    margin-top: 3rem;
     visibility: hidden;
     opacity: 0;
     transition: 4s;
@@ -71,7 +73,7 @@
 
   .game-over {
     font-family: "Grenze Gotisch", cursive;
-    font-size: 6rem;
+    font-size: 5.5rem;
     margin-top: -9rem;
     color: red;
     visibility: hidden;
@@ -82,12 +84,12 @@
   .wave,
   .wave span {
     font-family: "Grenze Gotisch", cursive;
-    font-size: 4rem;
+    font-size: 3.25rem;
   }
 
   .killed-goblins,
   .killed-goblins span {
     font-family: "Grenze Gotisch", cursive;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }

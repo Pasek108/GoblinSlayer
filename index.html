@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="Cache-control" content="public" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Goblin Slayer is a simple canvas arcade game where player have to survive increasing waves of goblins in one attempt" />
+    <meta name="keywords" content="goblin, goblins, slayer, survive waves, arcase game" />
+    <meta name="author" content="Artur Pas" />
+    <meta name="robots" content="index, follow" />
+    <title>Goblin Slayer</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet" />
@@ -18,120 +23,122 @@
   </head>
 
   <body>
-    <canvas class="snow-background"></canvas>
+    <main>
+      <canvas class="snow-background"></canvas>
 
-    <!------- Menu ------->
-    <div class="menu">
-      <div class="title">Goblin Slayer</div>
+      <!------- Menu ------->
+      <div class="menu">
+        <div class="title">Goblin Slayer</div>
 
-      <button class="option focused" autofocus>
-        <div class="dot-left"></div>
-        Start
-        <div class="dot-right"></div>
-      </button>
+        <button class="option focused" autofocus>
+          <div class="dot-left"></div>
+          Start
+          <div class="dot-right"></div>
+        </button>
 
-      <button class="option">
-        <div class="dot-left"></div>
-        Achievements
-        <div class="dot-right"></div>
-      </button>
+        <button class="option">
+          <div class="dot-left"></div>
+          Achievements
+          <div class="dot-right"></div>
+        </button>
 
-      <button class="option">
-        <div class="dot-left"></div>
-        Credits
-        <div class="dot-right"></div>
-      </button>
+        <button class="option">
+          <div class="dot-left"></div>
+          Credits
+          <div class="dot-right"></div>
+        </button>
 
-      <button class="mute">
-        <img alt="mute_button" src="Images/audioOn.png" />
-      </button>
-    </div>
-
-    <!------- Achievements ------->
-    <div class="achievements">
-      <div class="close">X</div>
-      <h2>Achievements</h2>
-
-      <div class="stats">
-        <div>Time spent in game: <span class="time-in-game"></span></div>
-        <div>Killed goblins: <span class="killed-goblins"></span></div>
-        <div>Killed goblins record: <span class="killed-goblins-record"></span></div>
-        <div>Survived waves record: <span class="waves-survived-record"></span></div>
+        <button class="mute">
+          <img alt="mute_button" src="Images/audioOn.png" />
+        </button>
       </div>
 
-      <div class="achievements-list">
-        <div class="achievement">
-          <h3 class="text">Spend 60 minutes in game <span class="progress-counter"></span></h3>
-          <div class="progress" data-req="60"><div></div></div>
+      <!------- Achievements ------->
+      <div class="achievements">
+        <div class="close">X</div>
+        <h2>Achievements</h2>
+
+        <div class="stats">
+          <div>Time spent in game: <span class="time-in-game"></span></div>
+          <div>Killed goblins: <span class="killed-goblins"></span></div>
+          <div>Killed goblins record: <span class="killed-goblins-record"></span></div>
+          <div>Survived waves record: <span class="waves-survived-record"></span></div>
         </div>
 
-        <div class="achievement">
-          <h3 class="text">Kill 1000 goblins in total <span class="progress-counter"></span></h3>
-          <div class="progress" data-req="1000"><div></div></div>
-        </div>
+        <div class="achievements-list">
+          <div class="achievement">
+            <h3 class="text">Spend 60 minutes in game <span class="progress-counter"></span></h3>
+            <div class="progress" data-req="60"><div></div></div>
+          </div>
 
-        <div class="achievement">
-          <h3 class="text">Kill 300 goblins in one try <span class="progress-counter"></span></h3>
-          <div class="progress" data-req="300"><div></div></div>
-        </div>
+          <div class="achievement">
+            <h3 class="text">Kill 1000 goblins in total <span class="progress-counter"></span></h3>
+            <div class="progress" data-req="1000"><div></div></div>
+          </div>
 
-        <div class="achievement">
-          <h3 class="text">Survive 25 waves in total <span class="progress-counter"></span></h3>
-          <div class="progress" data-req="25"><div></div></div>
-        </div>
-      </div>
-    </div>
+          <div class="achievement">
+            <h3 class="text">Kill 300 goblins in one try <span class="progress-counter"></span></h3>
+            <div class="progress" data-req="300"><div></div></div>
+          </div>
 
-    <!------- Credits ------->
-    <div class="credits">
-      <div class="close">X</div>
-      <h2>Credits</h2>
-
-      <div class="credits-list">
-        <div>
-          <h3>Images</h3>
-          <a href="https://i.imgur.com/LAFEmei.png" target="_blank">Menu background</a>
-          <a href="https://lil-cthulhu.itch.io/pixel-art-cave-background" target="_blank">Game background</a>
-          <a href="https://lil-cthulhu.itch.io/pixel-art-tileset-cave" target="_blank">Game background floor</a>
-          <a href="https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/" target="_blank">Hero</a>
-          <a href="https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/" target="_blank">Goblin</a>
-        </div>
-        <div>
-          <h3>Music and sounds</h3>
-          <a href="https://opengameart.org/content/fantasy-music-the-wraiths-of-winter" target="_blank">Menu music</a>
-          <a href="https://opengameart.org/content/menu-selection-click" target="_blank">Menu option select</a>
-          <a href="https://opengameart.org/content/massacre-soundtrack" target="_blank">Game music 1</a>
-          <a href="https://opengameart.org/content/fight-theme-metal" target="_blank">Game music 2</a>
-          <a href="https://filmmusic.io/song/4814-metalicious" target="_blank">Game music 3</a>
-          <a href="https://freesound.org/people/HerbertBoland/sounds/128554/" target="_blank">Game over music</a>
-          <a href="https://freesound.org/people/Rickplayer/sounds/398007/" target="_blank">Goblin death</a>
+          <div class="achievement">
+            <h3 class="text">Survive 25 waves in total <span class="progress-counter"></span></h3>
+            <div class="progress" data-req="25"><div></div></div>
+          </div>
         </div>
       </div>
 
-      <div class="footer">Artur Pas 2023</div>
-    </div>
+      <!------- Credits ------->
+      <div class="credits">
+        <div class="close">X</div>
+        <h2>Credits</h2>
 
-    <!------- Game ------->
-    <div class="board">
-      <div class="game-over">Game Over</div>
-      <div class="wave">Wave: <span>1</span></div>
-      <div class="killed-goblins">Killed goblins: <span>0</span></div>
-      <button class="option focused">
-        <div class="dot-left"></div>
-        Back to menu
-        <div class="dot-right"></div>
-      </button>
+        <div class="credits-list">
+          <div>
+            <h3>Images</h3>
+            <a href="https://i.imgur.com/LAFEmei.png" target="_blank">Menu background</a>
+            <a href="https://lil-cthulhu.itch.io/pixel-art-cave-background" target="_blank">Game background</a>
+            <a href="https://lil-cthulhu.itch.io/pixel-art-tileset-cave" target="_blank">Game background floor</a>
+            <a href="https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/" target="_blank">Hero</a>
+            <a href="https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/" target="_blank">Goblin</a>
+          </div>
+          <div>
+            <h3>Music and sounds</h3>
+            <a href="https://opengameart.org/content/fantasy-music-the-wraiths-of-winter" target="_blank">Menu music</a>
+            <a href="https://opengameart.org/content/menu-selection-click" target="_blank">Menu option select</a>
+            <a href="https://opengameart.org/content/massacre-soundtrack" target="_blank">Game music 1</a>
+            <a href="https://opengameart.org/content/fight-theme-metal" target="_blank">Game music 2</a>
+            <a href="https://filmmusic.io/song/4814-metalicious" target="_blank">Game music 3</a>
+            <a href="https://freesound.org/people/HerbertBoland/sounds/128554/" target="_blank">Game over music</a>
+            <a href="https://freesound.org/people/Rickplayer/sounds/398007/" target="_blank">Goblin death</a>
+          </div>
+        </div>
 
-      <div class="how-to-play">
-        turn left
-        <span class="key"><i class="fa-solid fa-a"></i></span>
-        or
-        <span class="key"><i class="fa-solid fa-d"></i></span>
-        turn right
+        <div class="footer">Artur Pas 2023</div>
       </div>
-    </div>
 
-    <canvas class="game"></canvas>
+      <!------- Game ------->
+      <div class="board">
+        <div class="game-over">Game Over</div>
+        <div class="wave">Wave: <span>1</span></div>
+        <div class="killed-goblins">Killed goblins: <span>0</span></div>
+        <button class="option focused">
+          <div class="dot-left"></div>
+          Back to menu
+          <div class="dot-right"></div>
+        </button>
+
+        <div class="how-to-play">
+          turn left
+          <span class="key"><i class="fa-solid fa-a"></i></span>
+          or
+          <span class="key"><i class="fa-solid fa-d"></i></span>
+          turn right
+        </div>
+      </div>
+
+      <canvas class="game"></canvas>
+    </main>
 
     <script src="Scripts/global.js"></script>
     <script src="Scripts/SnowBackground.js"></script>

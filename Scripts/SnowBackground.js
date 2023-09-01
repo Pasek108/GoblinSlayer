@@ -13,7 +13,6 @@ class SnowBackground {
     this.animation = null;
     this.size = this.h / 300;
     this.speed = this.h / 100;
-    this.time = 0;
 
     this.flakes_amount = 50;
     this.flakes = [];
@@ -52,16 +51,14 @@ class SnowBackground {
       this.ctx.fillStyle = "#ffffff";
       this.ctx.fill();
 
-      flake.x = flake.x - flake.toX * (this.time * 0.05);
-      flake.y = flake.y + flake.toY * (this.time * 0.05);
+      flake.x = flake.x - flake.toX * (this.speed * 0.05);
+      flake.y = flake.y + flake.toY * (this.speed * 0.05);
 
       if (flake.x > this.w) flake.x = 0;
       if (flake.y > this.h) flake.y = 0;
       if (flake.x < 0) flake.x = this.w;
       if (flake.y < 0) flake.y = this.h;
     });
-
-    if (this.time < this.speed) this.time++;
 
     this.animation = requestAnimationFrame(this.render.bind(this));
   }
