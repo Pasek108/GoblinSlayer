@@ -1,7 +1,6 @@
 # GoblinSlayer
-Arcade game where player have to survive increasing waves of goblins in one attempt
+Arcade game where player have to survive increasing waves of goblins in one attempt.
 See [live demo](https://pasek108.github.io/GoblinSlayer/).
-
 
 
 ## Table of Contents
@@ -10,8 +9,9 @@ See [live demo](https://pasek108.github.io/GoblinSlayer/).
   * [Features](#features)
   * [Setup](#setup)
   * [Acknowledgements](#acknowledgements)
-* [Detailed description](#detailed-description)
+* [Details](#details)
   * [Acknowledgements](#acknowledgements)
+
 
 ## Informations
 
@@ -29,7 +29,7 @@ See [live demo](https://pasek108.github.io/GoblinSlayer/).
 
 
 
-## Detailed description
+## Details
 
 
 ### User interface
@@ -45,3 +45,11 @@ In game
 
 Game over
 ![game over](/_for_readme/game_over.png)
+
+Credits
+![credits](/_for_readme/credits.png)
+
+
+### Program
+
+![program diagram](/_for_readme/program_diagram.png)
