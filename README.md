@@ -1,7 +1,9 @@
 # GoblinSlayer
 Arcade game where player have to survive increasing waves of goblins in one attempt.
-See [live demo](https://pasek108.github.io/GoblinSlayer/).
 
+See the [live demo](https://pasek108.github.io/GoblinSlayer/).
+
+![preview](/_for_readme/preview.png)
 
 ## Table of Contents
 * [Informations](#informations)
@@ -17,10 +19,23 @@ See [live demo](https://pasek108.github.io/GoblinSlayer/).
 
 
 ### Technologies
+The game is written with:
 
+Languages:
+- HTML
+- SCSS
+- JS
+  
+Libraries:
+- FontAwesome 6.2.1
+- GoogleFonts
+  
+Programs:
+- VSCode
+- Prepros (auto preview, processing scss, project organization)
 
 ### Features
-
+T
 
 ### Setup
 
