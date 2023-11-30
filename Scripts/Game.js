@@ -26,7 +26,6 @@ class Game {
     this.goblins.push(new Goblin(this.container.width, this.container.height, 0, +(Math.random() > 0.5), 3))
 
     this.wave = 0
-    this.next_wave_timer = 0
     this.killed_goblins = 0
   }
 
@@ -40,11 +39,12 @@ class Game {
   reset() {
     this.goblins = []
     this.wave = 0
-    this.next_wave_timer = 0
     this.killed_goblins = 0
-    this.game_music.currentTime = 0
+    
     this.game_over_music.pause()
     this.game_over_music.currentTime = 0
+    this.game_music.currentTime = 0
+    
     this.board.classList.remove("game-over")
     this.wave_container.innerHTML = "1"
     this.killed_goblins_container.innerHTML = "0"
@@ -92,19 +92,14 @@ class Game {
     }
 
     if (this.goblins.length == 0 || this.goblins[this.goblins.length - 1].killed) {
-      this.next_wave_timer++
+      this.next_wave_timer = 0
+      this.goblins = []
+      this.wave_container.innerHTML = ++this.wave
+      let speed = 3 + Math.floor(this.wave / 2)
+      let quantity = this.wave + Math.floor(this.wave / 2)
 
-      if (this.next_wave_timer === 1) {
-        this.next_wave_timer = 0
-        this.goblins = []
-        this.wave += 1
-        this.wave_container.innerHTML = this.wave
-        let speed = 3 + Math.floor(this.wave / 2)
-        let quantity = this.wave + Math.floor(this.wave / 2)
-
-        for (let i = 0; i < quantity; i++) {
-          this.goblins.push(new Goblin(this.container.width, this.container.height, i, +(Math.random() > 0.5), speed))
-        }
+      for (let i = 0; i < quantity; i++) {
+        this.goblins.push(new Goblin(this.container.width, this.container.height, i, +(Math.random() > 0.5), speed))
       }
     }
 

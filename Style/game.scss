@@ -28,11 +28,13 @@
   padding: 1rem 0 0 0;
   display: none;
   transition: background 2s, padding 4s;
+  cursor: none;
 
   &.game-over {
     background: black;
     height: 100vh;
     padding-top: 35vh;
+    cursor: auto;
 
     .game-over,
     .option {
@@ -56,6 +58,7 @@
     visibility: visible;
     opacity: 1;
     transition: 2s;
+    cursor: none;
 
     div {
       width: 100%;

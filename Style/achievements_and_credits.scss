@@ -57,6 +57,7 @@
   padding: 1rem;
   margin: 1rem;
   border: 1px solid white;
+  display: none;
 
   div {
     font-family: "Grenze Gotisch", cursive;
@@ -73,11 +74,17 @@
 }
 
 .achievements-list {
-  @include flex(column, center, flex-start);
-  height: 65%;
-  padding: 1rem;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  gap: 4rem 2rem;
+  max-height: calc(100% - 11rem);
+  max-width: 100%;
+  padding-top: 3.5rem;
+  margin: 1rem;
+  border-top: 1px solid whitesmoke;
   text-align: left;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     display: initial;
@@ -91,16 +98,130 @@
 }
 
 .achievement {
-  width: 80%;
-  margin-bottom: 1.5rem;
+  position: relative;
+  @include flex(column, center, flex-start);
+  min-width: 16rem;
+  width: 35rem;
+  max-width: 90%;
   padding: 1.5rem;
-  border: 1px solid whitesmoke;
+  padding-top: 8rem;
+  border: 1px solid #444444;
 
   h3 {
     font-family: "Grenze Gotisch", cursive;
     margin: 0;
     margin-top: -0.5rem;
     font-size: 1.125rem;
+  }
+
+  .banner {
+    @include position(absolute, -1.5rem);
+    @include flex(column, center, center);
+    width: 100%;
+
+    img {
+      @include position(relative, $zindex: 1);
+      height: 2.5rem;
+      aspect-ratio: 1500/120;
+      min-width: 15rem;
+    }
+
+    span {
+      @include position(absolute, 0, $zindex: 2);
+      font-family: "Grenze Gotisch", cursive;
+      font-size: 1.25rem;
+    }
+
+    .stars {
+      @include position(relative, -0.5rem);
+      @include flex(row, center, center);
+      gap: 2rem;
+    }
+
+    .star {
+      position: relative;
+      @include flex(column, center, center);
+
+      &.bronze {
+        height: 2.5rem;
+        margin-top: -1.5rem;
+
+        .bg1,
+        .bg2::after {
+          border-color: #9b6217;
+        }
+      }
+
+      &.silver {
+        height: 2.5rem;
+        margin-top: -1.5rem;
+
+        .bg1,
+        .bg2::after {
+          border-color: #979797;
+        }
+      }
+
+      &.gold {
+        height: 4rem;
+
+        .bg1,
+        .bg2::after {
+          border-color: #ffd500;
+        }
+      }
+
+      &.locked {
+        .bg1,
+        .bg2::after {
+          border-color: #222429;
+        }
+      }
+
+      img {
+        position: absolute;
+        margin-top: 0.7rem;
+
+        &.locked {
+          filter: grayscale(100%)
+        }
+      }
+
+      .bg1 {
+        position: relative;
+        width: 3rem;
+        height: 101%;
+        border-left: 1px solid;
+        border-right: 1px solid;
+        background-color: #444444;
+
+        &::after {
+          content: "";
+          @include position(absolute, 0, calc(-0.5rem + 0.5px), $zindex: -1);
+          width: 4rem;
+          height: calc(100% + 0.275rem);
+          background-color: #444444;
+        }
+      }
+
+      .bg2 {
+        @include position(absolute, $left: 0.125rem, $bottom: -1.7rem, $zindex: -1);
+        width: 2.81rem;
+        height: 2.81rem;
+        background-color: #444444;
+        rotate: 45deg;
+
+        &::after {
+          content: "";
+          @include position(absolute, $bottom: 0.5rem, $right: 0.5rem);
+          width: 2.13rem;
+          height: 2.13rem;
+          border-bottom: 1px solid;
+          border-right: 1px solid;
+          background-color: #444444;
+        }
+      }
+    }
   }
 }
 

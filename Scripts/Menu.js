@@ -6,11 +6,11 @@ class Menu {
   constructor() {
     this.contianer = document.querySelector(".menu")
 
-    this.mute = this.contianer.querySelector(".mute")
-    this.mute.addEventListener("click", this.toggleMute.bind(this))
+    this.sound_volume = this.contianer.querySelector(".volume")
+    this.sound_volume.addEventListener("click", this.toggleSound.bind(this))
 
     this.options = this.contianer.querySelectorAll(".option")
-    this.options.forEach((option) => option.addEventListener("mouseenter", (evt) => this.optionFocus(evt, option)))
+    //this.options.forEach((option) => option.addEventListener("mouseenter", (evt) => this.optionFocus(evt, option)))
 
     this.option_select_sound = new Audio("Sound/menu_selection.wav")
     this.option_select_sound.volume = 0.7
@@ -40,17 +40,15 @@ class Menu {
     this.achievements.update()
   }
 
-  toggleMute() {
-    const icon = this.mute.firstElementChild
-
-    if (icon.src.includes("On")) {
-      icon.src = icon.src.replace("On", "Off")
-      this.menu_music.pause()
-      Menu.is_sound_muted = true
-    } else {
-      icon.src = icon.src.replace("Off", "On")
+  toggleSound() {
+    if (this.sound_volume.classList.contains("muted")) {
+      this.sound_volume.classList.remove("muted");
       this.menu_music.play()
       Menu.is_sound_muted = false
+    } else {
+      this.sound_volume.classList.add("muted");
+      this.menu_music.pause()
+      Menu.is_sound_muted = true
     }
   }
 
