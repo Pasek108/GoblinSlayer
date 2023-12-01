@@ -50,29 +50,6 @@
   bottom: 100vh;
 }
 
-.stats {
-  @include flex(row, center, space-evenly);
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  margin: 1rem;
-  border: 1px solid white;
-  display: none;
-
-  div {
-    font-family: "Grenze Gotisch", cursive;
-    font-size: 1.125rem;
-    white-space: nowrap;
-
-    span {
-      display: inline-block;
-      margin-top: -0.25rem;
-      font-family: "Grenze Gotisch", cursive;
-      font-size: 1.25rem;
-    }
-  }
-}
-
 .achievements-list {
   @include flex(row, center, center);
   flex-wrap: wrap;
@@ -114,12 +91,60 @@
     font-size: 1.125rem;
   }
 
+  &.bronze {
+    border: 1px solid #9b6217;
+
+    .star.bronze .bg1,
+    .star.bronze .bg2::after {
+      border-color: #9b6217;
+    }
+
+    .star.bronze img {
+      filter: none !important;
+    }
+
+    .progress div {
+      background-color: #979797;
+    }
+  }
+
+  &.silver {
+    border: 1px solid #979797;
+
+    .star.silver .bg1,
+    .star.silver .bg2::after {
+      border-color: #979797;
+    }
+
+
+    .star.silver img {
+      filter: none !important;
+    }
+
+    .progress div {
+      background-color: #ffd500;
+    }
+  }
+
+  &.gold {
+    border: 1px solid #ffd500;
+
+    .star.gold .bg1,
+    .star.gold .bg2::after {
+      border-color: #ffd500;
+    }
+
+    .star.gold img {
+      filter: none !important;
+    }
+  }
+
   .banner {
     @include position(absolute, -1.5rem);
     @include flex(column, center, center);
     width: 100%;
 
-    img {
+    & > img {
       @include position(relative, $zindex: 1);
       height: 2.5rem;
       aspect-ratio: 1500/120;
@@ -142,57 +167,30 @@
       position: relative;
       @include flex(column, center, center);
 
-      &.bronze {
-        height: 2.5rem;
-        margin-top: -1.5rem;
-
-        .bg1,
-        .bg2::after {
-          border-color: #9b6217;
-        }
-      }
-
+      &.bronze,
       &.silver {
         height: 2.5rem;
         margin-top: -1.5rem;
-
-        .bg1,
-        .bg2::after {
-          border-color: #979797;
-        }
       }
 
       &.gold {
         height: 4rem;
-
-        .bg1,
-        .bg2::after {
-          border-color: #ffd500;
-        }
-      }
-
-      &.locked {
-        .bg1,
-        .bg2::after {
-          border-color: #222429;
-        }
       }
 
       img {
         position: absolute;
+        height: 2.5rem;
+        aspect-ratio: 1;
         margin-top: 0.7rem;
-
-        &.locked {
-          filter: grayscale(100%)
-        }
+        filter: brightness(0) invert(12%) sepia(3%) saturate(2188%) hue-rotate(185deg) brightness(99%) contrast(95%);
       }
 
       .bg1 {
         position: relative;
         width: 3rem;
         height: 101%;
-        border-left: 1px solid;
-        border-right: 1px solid;
+        border-left: 1px solid #222429;
+        border-right: 1px solid #222429;
         background-color: #444444;
 
         &::after {
@@ -216,8 +214,8 @@
           @include position(absolute, $bottom: 0.5rem, $right: 0.5rem);
           width: 2.13rem;
           height: 2.13rem;
-          border-bottom: 1px solid;
-          border-right: 1px solid;
+          border-bottom: 1px solid #222429;
+          border-right: 1px solid #222429;
           background-color: #444444;
         }
       }
@@ -228,7 +226,7 @@
 .progress {
   @include flex(column, flex-start, flex-start);
   border-radius: 1rem;
-  background-color: #6a6a6a;
+  background-color: #4a4a4a;
   width: 100%;
   height: 0.5rem;
   margin-top: 1rem;
@@ -238,7 +236,7 @@
     width: 0;
     height: 100%;
     border-radius: 1rem;
-    background-color: #ffd500;
+    background-color: #9b6217;
   }
 }
 

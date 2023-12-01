@@ -31,20 +31,21 @@ class Game {
 
   start() {
     this.container.style.display = "block"
+    this.board.style.display = "flex"
+
     if (!Menu.is_sound_muted) this.game_music.play()
     this.animation = requestAnimationFrame(this.render.bind(this))
-    this.board.style.display = "flex"
   }
 
   reset() {
     this.goblins = []
     this.wave = 0
     this.killed_goblins = 0
-    
+
     this.game_over_music.pause()
     this.game_over_music.currentTime = 0
     this.game_music.currentTime = 0
-    
+
     this.board.classList.remove("game-over")
     this.wave_container.innerHTML = "1"
     this.killed_goblins_container.innerHTML = "0"
@@ -65,44 +66,67 @@ class Game {
     for (let i = 0; i < this.goblins.length; i++) {
       this.goblins[i].draw(this.ctx)
 
-      if (Math.abs(this.goblins[i].pos.x + this.goblins[i].size.w / 2) < this.hero.size.w / 2.5) {
+      const goblin_center_pos = Math.abs(this.goblins[i].pos.x + this.goblins[i].size.w / 2)
+
+      if (goblin_center_pos < this.hero.size.w / 2.5) {
         if (this.hero.side != this.goblins[i].side) {
-          this.goblins[i].killed = true
-          this.killed_goblins++
-          this.killed_goblins_container.innerHTML = this.killed_goblins
-          if (!Menu.is_sound_muted) this.goblins[i].death_sound.play()
-          this.goblins[i].pos.x = 100000
-          this.hero.attack = this.goblins[i].side ? -1 : 1
-        } else if (Math.abs(this.goblins[i].pos.x + this.goblins[i].size.w / 2) < this.hero.size.w / 4) {
-          this.animation = cancelAnimationFrame(this.animation)
-          this.game_music.pause()
-          if (!Menu.is_sound_muted) this.game_over_music.play()
-          this.board.classList.add("game-over")
+          this.killGoblin(i)
+          continue
+        }
 
-          const killed_goblins = +localStorage.getItem("killed-goblins")
-          const waves_survived_record = +localStorage.getItem("waves-survived-record")
-          const killed_goblins_record = +localStorage.getItem("killed-goblins-record")
-
-          localStorage.setItem("killed-goblins", `${killed_goblins + this.killed_goblins}`)
-          if (waves_survived_record < this.wave) localStorage.setItem("waves-survived-record", `${this.wave}`)
-          if (killed_goblins_record < this.killed_goblins) localStorage.setItem("killed-goblins-record", `${this.killed_goblins}`)
+        if (goblin_center_pos < this.hero.size.w / 4) {
+          this.gameOver()
           return
         }
       }
     }
 
-    if (this.goblins.length == 0 || this.goblins[this.goblins.length - 1].killed) {
-      this.next_wave_timer = 0
-      this.goblins = []
-      this.wave_container.innerHTML = ++this.wave
-      let speed = 3 + Math.floor(this.wave / 2)
-      let quantity = this.wave + Math.floor(this.wave / 2)
-
-      for (let i = 0; i < quantity; i++) {
-        this.goblins.push(new Goblin(this.container.width, this.container.height, i, +(Math.random() > 0.5), speed))
-      }
-    }
+    if (this.goblins.length == 0 || this.goblins[this.goblins.length - 1].killed) this.nextWaveOfGoblins()
 
     this.animation = requestAnimationFrame(this.render.bind(this))
+  }
+
+  nextWaveOfGoblins() {
+    this.wave_container.innerHTML = ++this.wave
+
+    this.goblins = []
+    let speed = 3 + Math.floor(this.wave / 2)
+    let quantity = this.wave + Math.floor(this.wave / 2)
+
+    for (let i = 0; i < quantity; i++) {
+      this.goblins.push(new Goblin(this.container.width, this.container.height, i, +(Math.random() > 0.5), speed))
+    }
+  }
+
+  killGoblin(goblin_id) {
+    this.goblins[goblin_id].killed = true
+    this.goblins[goblin_id].pos.x = 100000
+
+    this.killed_goblins++
+    this.killed_goblins_container.innerHTML = this.killed_goblins
+
+    if (!Menu.is_sound_muted) this.goblins[goblin_id].death_sound.play()
+    this.hero.attack = this.goblins[goblin_id].side ? -1 : 1
+  }
+
+  gameOver() {
+    this.animation = cancelAnimationFrame(this.animation)
+    this.game_music.pause()
+
+    if (!Menu.is_sound_muted) this.game_over_music.play()
+
+    this.board.classList.add("game-over")
+
+    this.saveStats()
+  }
+
+  saveStats() {
+    const killed_goblins = +localStorage.getItem("killed-goblins")
+    const waves_survived = +localStorage.getItem("waves-survived")
+    const killed_goblins_record = +localStorage.getItem("killed-goblins-record")
+
+    localStorage.setItem("killed-goblins", `${killed_goblins + this.killed_goblins}`)
+    localStorage.setItem("waves-survived", `${waves_survived + this.wave}`)
+    if (killed_goblins_record < this.killed_goblins) localStorage.setItem("killed-goblins-record", `${this.killed_goblins}`)
   }
 }
