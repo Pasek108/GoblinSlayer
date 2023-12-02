@@ -1,7 +1,17 @@
 # GoblinSlayer
-Arcade game where player have to survive increasing waves of goblins in one attempt.
-
+Arcade game where player have to survive increasing waves of goblins in one attempt. <br>
 See the [live demo](https://pasek108.github.io/GoblinSlayer/).
+
+<details>
+  <summary>Why my commits often have no names</summary>
+  <div>
+    <ul>
+      <li>I tend to create with bursts many things at once</li>
+      <li>Sometimes I have bad internet connection and I can't send separate commits</li>
+      <li>Describing commits doesn't matter when I'm coding alone</li>
+   <ul>
+  </div>
+</details>
 
 ![preview](/_for_readme/preview.png)
 
@@ -180,7 +190,8 @@ The project directory tree looks like this:
 
 ![program diagram](/_for_readme/program_diagram.png)
 
-:warning: Classes must be loaded from bottom to the top to avoid situation when class does not exist in the time of its objects creation
+> [!WARNING]  
+> Classes must be loaded from bottom to the top to avoid situation when class does not exist in the time of its objects creation
 
 Menu is entry of the program.
 
