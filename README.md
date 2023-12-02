@@ -152,6 +152,7 @@ The way the game works is simple:
 ![game over](/_for_readme/game_over.png)
 Game over view displays survived waves, killed goblins and button that goes back to main menu
 
+----------------------------------
 
 ### Project structure
 The project directory tree looks like this:
