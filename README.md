@@ -4,7 +4,7 @@
   <ul>
     <li>I tend to create with bursts many things at once</li>
     <li>Sometimes I have bad internet connection and I can't send separate commits</li>
-    <li>Describing commits doesn't matter when I'm coding alone</li>
+    <li>Describing commits doesn't matter when I'm coding alone. For the same reason I'm using only one branch</li>
   <ul>
 </details>
 <details>
