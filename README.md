@@ -14,7 +14,9 @@ See the [live demo](https://pasek108.github.io/GoblinSlayer/).
   * [Setup](#setup)
   * [Acknowledgements](#acknowledgements)
 * [Details](#details)
-  * [Acknowledgements](#acknowledgements)
+  * [User interface](#user-interface)
+  * [Project structure](#project-structure)
+  * [Code organization](#code-organization)
 
 <br>
 
@@ -36,14 +38,14 @@ Programs:
 ----------------------------------
 
 ### Features
+- Nice and consistent UI
 - Animated menu background
-- Turning on/off the sound
-- Achievements
-- Credits
-- Generating increasing waves of goblins
-- Counting waves and killed goblins
-- Game over screen
-- Game restart
+- Achievements with 3 levels of completion
+- Good looking credits view
+- Generating increasingly larger and faster waves of goblins
+- Counting and saving survived waves, killed goblins and time spent in game
+- Game over view and restarting game without page reload
+- Mute/unmute the sound
 
 ----------------------------------
 
@@ -63,45 +65,127 @@ To edit program:
 ----------------------------------
 
 ### Acknowledgements
-Images<br>
-<a href="https://i.imgur.com/LAFEmei.png" target="_blank">Menu background</a><br>
-<a href="https://lil-cthulhu.itch.io/pixel-art-cave-background" target="_blank">Game background</a><br>
-<a href="https://lil-cthulhu.itch.io/pixel-art-tileset-cave" target="_blank">Game background floor</a><br>
-<a href="https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/" target="_blank">Hero</a><br>
-<a href="https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/" target="_blank">Goblin</a><br>
+#### Images
+- [Menu background](https://i.imgur.com/LAFEmei.png)
+- [Achievement ribbon](https://svgsilh.com/image/1093181.html)
+- [Achievement star](https://svgsilh.com/image/775819.html)
+- [Game background](https://lil-cthulhu.itch.io/pixel-art-cave-background)
+- [Game background floor](https://lil-cthulhu.itch.io/pixel-art-tileset-cave)
+- [Hero sprite](https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/)
+- [Goblin sprite](https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/)
 
-Music and sounds<br>
-<a href="https://opengameart.org/content/fantasy-music-the-wraiths-of-winter" target="_blank">Menu music</a><br>
-<a href="https://opengameart.org/content/menu-selection-click" target="_blank">Menu option select</a><br>
-<a href="https://opengameart.org/content/massacre-soundtrack" target="_blank">Game music 1</a><br>
-<a href="https://opengameart.org/content/fight-theme-metal" target="_blank">Game music 2</a><br>
-<a href="https://filmmusic.io/song/4814-metalicious" target="_blank">Game music 3</a><br>
-<a href="https://freesound.org/people/HerbertBoland/sounds/128554/" target="_blank">Game over music</a><br>
-<a href="https://freesound.org/people/Rickplayer/sounds/398007/" target="_blank">Goblin death</a><br>
+#### Music and sounds
+- [Menu music](https://opengameart.org/content/fantasy-music-the-wraiths-of-winter)
+- [Menu option select](https://opengameart.org/content/menu-selection-click)
+- [Game music 1](https://opengameart.org/content/massacre-soundtrack)
+- [Game music 2](https://opengameart.org/content/fight-theme-metal)
+- [Game music 3](https://filmmusic.io/song/4814-metalicious)
+- [Game over music](https://freesound.org/people/HerbertBoland/sounds/128554/)
+- [Goblin death](https://freesound.org/people/Rickplayer/sounds/398007/)
 
 <br>
 
 ## Details
-
+This section is a general description of the project required to understand how it works, the exact details are in the code or simply are the code
 
 ### User interface
-
-Main menu
+#### Main menu
 ![main menu](/_for_readme/main_menu.png)
+Main menu has:
+- Animated snow background
+- Mute/unmute sound button
+- Three options too choose:
+  - Start option will hide the menu and runs the game
+  - Achievements option will show the achievements view
+  - Credits option will show the credits view
 
-Achievements
+----------------------------------
+
+#### Achievements
 ![achievements](/_for_readme/achievements.png)
+Achievements view shows achievements, each of which has:
+- Title ribbon
+- Three stars that indicate completion of a given level
+- Target text with current value of achievement and required value for next level (if it's not already max level)
+- Progress bar
 
-In game
-![in game](/_for_readme/in_game.png)
+Achievements has 3 levels to complete and 4 possible stages:
+- Stage 0:
+  - Gray border
+  - Disabled all stars
+  - Progess bar empty or bronze color (going to bronze level)
+- Stage 1:
+  - Bronze border
+  - Bronze star lighted up
+  - Silver progess bar color (going to silver level)
+- Stage 2:
+  - Silver border
+  - Silver and bronze stars lighted up
+  - Gold progess bar color (going to gold level)
+- Stage 3:
+  - Gold border
+  - All stars lighted up
+  - Gold progess bar color (gold level is max and it is completed)
 
-Game over
-![game over](/_for_readme/game_over.png)
+----------------------------------
 
-Credits
+#### Credits
 ![credits](/_for_readme/credits.png)
+Credits page contains 2 sections with links for resources used in the project and link to my github
+
+----------------------------------
+
+#### Game
+![in game](/_for_readme/in_game.png)
+At the top of the game view are wave and killed goblins counters and at the bottom is an instruction on what keys are used to play the game.
+
+The way the game works is simple:
+- Player is standing in the middle
+- Game generates random waves of goblins which runs towards the player
+- Player has to use keys A and D to face left or right direction
+- If player is facing goblin dirrection it will kill him, if no player will lose
+- When player clears a wave new one is generated with more goblins that are faster
+
+----------------------------------
+
+#### Game over
+![game over](/_for_readme/game_over.png)
+Game over view displays survived waves, killed goblins and button that goes back to main menu
 
 
-### Program
+### Project structure
+The project directory tree looks like this:
+- :file_folder: GoblinSlayer (project folder)
+  - :page_facing_up: *git config, prepros config, index.html file and readme*
+  - :file_folder: _for_readme
+    - :page_facing_up: *files for readme*
+  - :file_folder: Images
+    - :page_facing_up: *images used in the project*
+  - :file_folder: Sound
+    - :page_facing_up: *sounds and music used in project*
+  - :file_folder: Scripts
+    - :page_facing_up: *scripts used in project*
+  - :file_folder: Style
+    - :file_folder: scss
+      - :page_facing_up: *sccs files*
+    - :page_facing_up: *css files compiled from scss by prepros*
+
+----------------------------------
+
+### Code organization
 
 ![program diagram](/_for_readme/program_diagram.png)
+
+:warning: Classes must be loaded from bottom to the top to avoid situation when class does not exist in the time of its objects creation
+
+Menu is entry of the program.
+
+Menu creates and manages one instantiation of each of the classes:
+- SnowyBackground
+- Game
+- Achievements
+- Credits
+
+Game class creates and manages:
+- One instance of Hero class
+- Many instances of Goblin class
