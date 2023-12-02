@@ -3,14 +3,12 @@ Arcade game where player have to survive increasing waves of goblins in one atte
 See the [live demo](https://pasek108.github.io/GoblinSlayer/).
 
 <details>
-  <summary>Why my commits often have no names</summary>
-  <div>
-    <ul>
-      <li>I tend to create with bursts many things at once</li>
-      <li>Sometimes I have bad internet connection and I can't send separate commits</li>
-      <li>Describing commits doesn't matter when I'm coding alone</li>
-   <ul>
-  </div>
+  <summary>❓Why my commits often have no names❓</summary>
+  <ul>
+    <li>I tend to create with bursts many things at once</li>
+    <li>Sometimes I have bad internet connection and I can't send separate commits</li>
+    <li>Describing commits doesn't matter when I'm coding alone</li>
+  <ul>
 </details>
 
 ![preview](/_for_readme/preview.png)
