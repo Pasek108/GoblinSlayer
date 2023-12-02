@@ -10,7 +10,7 @@ class Menu {
     this.sound_volume.addEventListener("click", this.toggleSound.bind(this))
 
     this.options = this.contianer.querySelectorAll(".option")
-    //this.options.forEach((option) => option.addEventListener("mouseenter", (evt) => this.optionFocus(evt, option)))
+    this.options.forEach((option) => option.addEventListener("mouseenter", (evt) => this.optionFocus(evt, option)))
 
     this.option_select_sound = new Audio("Sound/menu_selection.wav")
     this.option_select_sound.volume = 0.7
@@ -18,6 +18,7 @@ class Menu {
     this.menu_music = new Audio("Sound/menu_music.mp3")
     this.menu_music.loop = true
     window.addEventListener("DOMContentLoaded", () => this.menu_music.play())
+    window.addEventListener("click", () => (this.menu_music.currentTime == 0) ? this.menu_music.play() : "")
 
     this.background = new SnowBackground()
     this.background.start()
