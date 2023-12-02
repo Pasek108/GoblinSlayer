@@ -157,7 +157,10 @@ Game over view displays survived waves, killed goblins and button that goes back
 ### Project structure
 The project directory tree looks like this:
 - :file_folder: GoblinSlayer (project folder)
-  - :page_facing_up: *git config, prepros config, index.html file and readme*
+  - :page_facing_up: *git config*
+  - :page_facing_up: *prepros config*
+  - :page_facing_up: *index.html file*
+  - :page_facing_up: *readme*
   - :file_folder: _for_readme
     - :page_facing_up: *files for readme*
   - :file_folder: Images
@@ -167,9 +170,9 @@ The project directory tree looks like this:
   - :file_folder: Scripts
     - :page_facing_up: *scripts used in project*
   - :file_folder: Style
+    - :page_facing_up: *css files compiled from scss by prepros*
     - :file_folder: scss
       - :page_facing_up: *sccs files*
-    - :page_facing_up: *css files compiled from scss by prepros*
 
 ----------------------------------
 
