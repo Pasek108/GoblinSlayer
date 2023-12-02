@@ -1,7 +1,4 @@
-# GoblinSlayer
-Arcade game where player have to survive increasing waves of goblins in one attempt. <br>
-See the [live demo](https://pasek108.github.io/GoblinSlayer/).
-
+# GoblinSlayer Readme
 <details>
   <summary>❓Why my commits often have no names❓</summary>
   <ul>
@@ -10,10 +7,10 @@ See the [live demo](https://pasek108.github.io/GoblinSlayer/).
     <li>Describing commits doesn't matter when I'm coding alone</li>
   <ul>
 </details>
-
-![preview](/_for_readme/preview.png)
-
-<br>
+<details>
+  <summary>❓Why sounds starts playing after first click and not when I open the page❓</summary>
+  It's because auto playing sounds is blocked by browser until the user interact with the document
+</details>
 
 ## Table of Contents
 * [Informations](#informations)
@@ -29,6 +26,13 @@ See the [live demo](https://pasek108.github.io/GoblinSlayer/).
 <br>
 
 ## Informations
+Arcade game where player have to survive increasing waves of goblins in one attempt. <br>
+See the [live demo](https://pasek108.github.io/GoblinSlayer/).
+
+![preview](/_for_readme/preview.png)
+
+----------------------------------
+
 ### Technologies
 Languages:
 - HTML
