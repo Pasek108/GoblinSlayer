@@ -22,8 +22,7 @@ class Game {
     this.background.src = "Images/game_background.png"
 
     this.hero = new Hero(this.container.width, this.container.height)
-    this.goblins = []
-    this.goblins.push(new Goblin(this.container.width, this.container.height, 0, +(Math.random() > 0.5), 3))
+    this.goblins = [new Goblin(this.container.width, this.container.height, 0, +(Math.random() > 0.5), 3)]
 
     this.wave = 0
     this.killed_goblins = 0
@@ -38,7 +37,7 @@ class Game {
   }
 
   reset() {
-    this.goblins = []
+    this.goblins = [new Goblin(this.container.width, this.container.height, 0, +(Math.random() > 0.5), 3)]
     this.wave = 0
     this.killed_goblins = 0
 
@@ -47,7 +46,7 @@ class Game {
     this.game_music.currentTime = 0
 
     this.board.classList.remove("game-over")
-    this.wave_container.innerHTML = "1"
+    this.wave_container.innerHTML = "0"
     this.killed_goblins_container.innerHTML = "0"
   }
 

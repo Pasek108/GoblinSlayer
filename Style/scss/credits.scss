@@ -1,0 +1,148 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto, $zindex: auto) {
+  position: $position;
+  inset: $top $right $bottom $left;
+  z-index: $zindex;
+}
+
+.credits {
+  @include position(absolute, 100vh, $left: 0, $zindex: 5);
+  width: 100vw;
+  height: 100vh;
+  background-color: #222429;
+  text-align: center;
+  transition: 0.5s;
+  overflow: hidden;
+
+  h2 {
+    margin: 1rem auto 0.5rem auto;
+    padding: 0.5rem;
+    margin: 0;
+    font-family: "Grenze Gotisch", cursive;
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .close {
+    @include position(absolute, 1rem, 1.5rem);
+    background: none;
+    border: none;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    font-size: 2.75rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(255, 213, 0);
+    }
+  }
+}
+
+.credits-list {
+  @include flex(row, flex-start, space-evenly);
+  gap: 12rem 2rem;
+  padding: 0;
+  height: calc(100% - 8rem);
+  max-height: unset;
+
+  .list {
+    position: relative;
+    @include flex(column, center, flex-start);
+    width: 15rem;
+    height: 22rem;
+    margin: 0.75rem 2.5rem 0 2.5rem;
+
+    &::after {
+      content: "";
+      @include position(absolute, -0.75rem, $zindex: -1);
+      width: 140%;
+      height: 0.75rem;
+      border-radius: 99rem;
+      background-color: #614014;
+    }
+
+    .bg1 {
+      @include position(absolute);
+      width: 100%;
+      height: 100%;
+      border-left: 0.25rem solid #222429;
+      border-right: 0.25rem solid #222429;
+      background-color: #444;
+
+      &::after {
+        content: "";
+        @include position(absolute, 0, -10%, $zindex: -2);
+        width: 120%;
+        height: 103%;
+        background-color: #444;
+      }
+    }
+
+    .bg2 {
+      @include position(absolute, $left: 7.75%, $bottom: -31.75%, $zindex: -1);
+      width: 84.625%;
+      aspect-ratio: 1;
+      background-color: #444;
+      rotate: 45deg;
+
+      &::after {
+        content: "";
+        @include position(absolute, $bottom: 10%, $right: 10%);
+        width: 84.5%;
+        aspect-ratio: 1;
+        border-bottom: 0.25rem solid #222429;
+        border-right: 0.25rem solid #222429;
+        background-color: #444;
+      }
+    }
+  }
+
+  h3 {
+    position: relative;
+    margin: 0;
+    margin-bottom: 1.125rem;
+    padding: 0.25rem 1rem;
+    font-family: "Grenze Gotisch", cursive;
+    font-size: 1.875rem;
+    color: #ffd500;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding: 0.375rem 1rem;
+    color: white;
+    font-family: "Grenze Gotisch", cursive;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffd500;
+      text-decoration: underline;
+    }
+  }
+}
+
+.credits .footer {
+  width: 100vw;
+  margin-top: -5rem;
+  font-family: "Grenze Gotisch", cursive;
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 625px) {
+  .credits .footer {
+    margin-top: 0;
+  }
+}

@@ -11,14 +11,15 @@
     <meta name="robots" content="index, follow" />
     <title>Goblin Slayer</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&family=Noto+Serif:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" />
 
     <link rel="stylesheet" href="Style/global.css" />
     <link rel="stylesheet" href="Style/menu.css" />
-    <link rel="stylesheet" href="Style/achievements_and_credits.css" />
+    <link rel="stylesheet" href="Style/achievements.css" />
+    <link rel="stylesheet" href="Style/credits.css" />
     <link rel="stylesheet" href="Style/game.css" />
   </head>
 
@@ -184,15 +185,24 @@
         <h2>Credits</h2>
 
         <div class="credits-list">
-          <div>
+          <div class="list">
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+
             <h3>Images</h3>
             <a href="https://i.imgur.com/LAFEmei.png" target="_blank">Menu background</a>
+            <a href="https://svgsilh.com/image/1093181.html" target="_blank">Achievement ribbon</a>
+            <a href="https://svgsilh.com/image/775819.html" target="_blank">Achievement star</a>
             <a href="https://lil-cthulhu.itch.io/pixel-art-cave-background" target="_blank">Game background</a>
             <a href="https://lil-cthulhu.itch.io/pixel-art-tileset-cave" target="_blank">Game background floor</a>
-            <a href="https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/" target="_blank">Hero</a>
-            <a href="https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/" target="_blank">Goblin</a>
+            <a href="https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/" target="_blank">Hero sprite</a>
+            <a href="https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/" target="_blank">Goblin sprite</a>
           </div>
-          <div>
+          
+          <div class="list">
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+
             <h3>Music and sounds</h3>
             <a href="https://opengameart.org/content/fantasy-music-the-wraiths-of-winter" target="_blank">Menu music</a>
             <a href="https://opengameart.org/content/menu-selection-click" target="_blank">Menu option select</a>
@@ -202,15 +212,22 @@
             <a href="https://freesound.org/people/HerbertBoland/sounds/128554/" target="_blank">Game over music</a>
             <a href="https://freesound.org/people/Rickplayer/sounds/398007/" target="_blank">Goblin death</a>
           </div>
+
+          <div class="footer">
+            Game created by
+            <a href="https://github.com/Pasek108" target="_blank">
+              Artur Pas <i class="fa-brands fa-github"></i> 
+            </a>
+          </div>
         </div>
 
-        <div class="footer">Artur Pas 2023</div>
+        
       </div>
 
       <!------- Game ------->
       <div class="board">
         <div class="game-over">Game Over</div>
-        <div class="wave">Wave: <span>1</span></div>
+        <div class="wave">Wave: <span>0</span></div>
         <div class="killed-goblins">Killed goblins: <span>0</span></div>
         <button class="option focused">
           <div class="dot-left"></div>

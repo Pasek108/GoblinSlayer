@@ -54,6 +54,7 @@
     flex-wrap: wrap;
     font-family: "Grenze Gotisch", cursive;
     font-size: 1.25rem;
+    font-weight: bold;
     color: gray;
     visibility: visible;
     opacity: 1;
@@ -88,6 +89,7 @@
   .game-over {
     font-family: "Grenze Gotisch", cursive;
     font-size: 5.5rem;
+    font-weight: bold;
     margin-top: -9rem;
     color: red;
     visibility: hidden;
@@ -99,6 +101,7 @@
   .wave span {
     font-family: "Grenze Gotisch", cursive;
     font-size: 3.25rem;
+    font-weight: bold;
   }
 
   .killed-goblins,
