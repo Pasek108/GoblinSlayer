@@ -190,7 +190,7 @@ The project directory tree looks like this:
     - :page_facing_up: *sounds and music used in project*
   - :file_folder: Scripts
     - :page_facing_up: *scripts used in project*
-  - :file_folder: Style
+  - :file_folder: Styles
     - :page_facing_up: *css files compiled from scss by prepros*
     - :file_folder: scss
       - :page_facing_up: *sccs files*
