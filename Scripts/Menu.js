@@ -6,25 +6,25 @@ class Menu {
   constructor() {
     this.contianer = document.querySelector(".menu")
 
-    this.sound_volume = this.contianer.querySelector(".volume")
-    this.sound_volume.addEventListener("click", this.toggleSound.bind(this))
-
-    this.options = this.contianer.querySelectorAll(".option")
-    this.options.forEach((option) => option.addEventListener("mouseenter", (evt) => this.optionFocus(evt, option)))
-
     this.option_select_sound = new Audio("Sound/menu_selection.wav")
     this.option_select_sound.volume = 0.7
 
     this.menu_music = new Audio("Sound/menu_music.mp3")
     this.menu_music.loop = true
     window.addEventListener("DOMContentLoaded", () => this.menu_music.play())
-    window.addEventListener("click", () => (this.menu_music.currentTime == 0) ? this.menu_music.play() : "")
+    window.addEventListener("click", () => (this.menu_music.currentTime == 0 ? this.menu_music.play() : ""))
+
+    this.sound_volume = this.contianer.querySelector(".volume")
+    this.sound_volume.addEventListener("click", this.toggleSound.bind(this))
 
     this.background = new SnowBackground()
     this.background.start()
     this.game = new Game()
     this.achievements = new Achievements()
     this.credits = new Credits()
+
+    this.options = this.contianer.querySelectorAll(".option")
+    this.options.forEach((option) => option.addEventListener("mouseenter", (evt) => this.optionFocus(evt, option)))
 
     this.options[0].addEventListener("click", () => {
       this.background.stop()
@@ -43,11 +43,11 @@ class Menu {
 
   toggleSound() {
     if (this.sound_volume.classList.contains("muted")) {
-      this.sound_volume.classList.remove("muted");
+      this.sound_volume.classList.remove("muted")
       this.menu_music.play()
       Menu.is_sound_muted = false
     } else {
-      this.sound_volume.classList.add("muted");
+      this.sound_volume.classList.add("muted")
       this.menu_music.pause()
       Menu.is_sound_muted = true
     }
