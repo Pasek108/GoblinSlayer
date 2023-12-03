@@ -1,15 +1,24 @@
 # GoblinSlayer Readme
 <details>
+  <summary>❓Why sounds starts playing after first click and not when I open the page❓</summary>
+  It's because auto playing sounds is blocked by browser until the user interact with the document.
+</details>
+<details>
   <summary>❓Why my commits often have no names❓</summary>
   <ul>
     <li>I tend to create with bursts many things at once</li>
     <li>Sometimes I have bad internet connection and I can't send separate commits</li>
-    <li>Describing commits doesn't matter when I'm coding alone. For the same reason I'm using only one branch</li>
+    <li>Describing commits doesn't matter when I'm coding alone</li>
   <ul>
 </details>
 <details>
-  <summary>❓Why sounds starts playing after first click and not when I open the page❓</summary>
-  It's because auto playing sounds is blocked by browser until the user interact with the document
+  <summary>❓Why I'm using only one branch❓</summary>
+  It's for the similar reasons as with commits.  
+  <ul>
+    <li>I do many things at once</li>
+    <li>I don't plan things ahead, I just go in and create things that seems good</li>
+    <li>I'm coding alone so I know the code and there is nothing I can break</li>
+  <ul>
 </details>
 
 ## Table of Contents
@@ -56,7 +65,7 @@ Programs:
 - Good looking credits view
 - Generating increasingly larger and faster waves of goblins
 - Counting and saving survived waves, killed goblins and time spent in game
-- Game over view and restarting game without page reload
+- Game over screen and restarting game without reloading page
 - Mute/unmute the sound
 
 ----------------------------------
@@ -98,7 +107,7 @@ To edit program:
 <br>
 
 ## Details
-This section is a general description of the project required to understand how it works, the exact details are in the code or simply are the code
+This section is a general description of the project required to understand how it works, the exact details are in the code or simply are the code.
 
 ### User interface
 #### Main menu
@@ -155,8 +164,8 @@ The way the game works is simple:
 - Player is standing in the middle
 - Game generates random waves of goblins which runs towards the player
 - Player has to use keys A and D to face left or right direction
-- If player is facing goblin dirrection it will kill him, if no player will lose
-- When player clears a wave new one is generated with more goblins that are faster
+- If player is facing goblin direction, he will kill the goblin, otherwise player will lose
+- When player clears a wave, new one is generated with more goblins that are faster
 
 ----------------------------------
 
