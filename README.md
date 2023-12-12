@@ -71,13 +71,13 @@ Programs:
 ----------------------------------
 
 ### Setup
-To run this program: 
-- Use the [live demo](https://pasek108.github.io/GoblinSlayer/)
-- Download this repo and:
+Ways to run this program: 
+1. Use the [live demo](https://pasek108.github.io/GoblinSlayer/)
+2. Download this repo and:
   - run index.html file
   - or start live server ([VSCode LiveServer Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), Prepros preview etc.) 
 
-To edit program:
+To edit this program:
 - Download this repo
 - Install [Prepros](https://prepros.io)
 - Add this project in Prepros
