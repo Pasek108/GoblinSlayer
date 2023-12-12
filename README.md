@@ -12,7 +12,7 @@
   <ul>
 </details>
 <details>
-  <summary>❓Why I'm using only one branch❓</summary>
+  <summary>❓Why am I using only one branch❓</summary>
   It's for the similar reasons as with commits.  
   <ul>
     <li>I do many things at once</li>
@@ -65,7 +65,7 @@ Programs:
 - Good looking credits view
 - Generating increasingly larger and faster waves of goblins
 - Counting and saving survived waves, killed goblins and time spent in game
-- Game over screen and restarting game without reloading page
+- Game over screen and game restart without reloading the page
 - Mute/unmute the sound
 
 ----------------------------------
@@ -206,7 +206,7 @@ The project directory tree looks like this:
 
 Menu is entry of the program.
 
-Menu creates and manages one instantiation of each of the classes:
+Menu creates and manages one instance of each of the classes:
 - SnowyBackground
 - Game
 - Achievements
