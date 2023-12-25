@@ -60,6 +60,11 @@ Programs:
 - Game over screen and game restart without reloading the page
 - Mute/unmute the sound
 
+> [!NOTE]  
+> Room for improvements:
+> - Choosing the hero appearance for achievements
+> - Fixing fps problem (game gets faster or slower depending on device framerate)
+
 ----------------------------------
 
 ### Setup
