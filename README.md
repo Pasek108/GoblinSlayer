@@ -4,20 +4,12 @@
   It's because auto playing sounds is blocked by browser until the user interact with the document.
 </details>
 <details>
-  <summary>❓Why my commits often have no names❓</summary>
+  <summary>❓Why my commits often have no names and I'm not using branches❓</summary>
   <ul>
-    <li>I tend to create with bursts many things at once</li>
-    <li>Sometimes I have bad internet connection and I can't send separate commits</li>
-    <li>Describing commits doesn't matter when I'm coding alone</li>
-  <ul>
-</details>
-<details>
-  <summary>❓Why am I using only one branch❓</summary>
-  It's for the similar reasons as with commits.  
-  <ul>
-    <li>I do many things at once</li>
-    <li>I don't plan things ahead, I just go in and create things that seems good</li>
-    <li>I'm coding alone so I know the code and there is nothing I can break</li>
+    <li>I often create with bursts many things at once</li>
+    <li>I don't plan things ahead, I just create things that seems good at that moment</li>
+    <li>Sometimes I have bad internet connection and it is troublesome to send commits</li>
+    <li>I'm coding alone so creating branches and describing commits is not useful for me</li>
   <ul>
 </details>
 
@@ -178,22 +170,16 @@ Game over view displays survived waves, killed goblins and button that goes back
 ### Project structure
 The project directory tree looks like this:
 - :file_folder: GoblinSlayer (project folder)
-  - :page_facing_up: *git config*
-  - :page_facing_up: *prepros config*
+  - :page_facing_up: *github and prepros config*
+  - :page_facing_up: *readme file*
   - :page_facing_up: *index.html file*
-  - :page_facing_up: *readme*
-  - :file_folder: _for_readme
-    - :page_facing_up: *files for readme*
-  - :file_folder: Images
-    - :page_facing_up: *images used in the project*
-  - :file_folder: Sound
-    - :page_facing_up: *sounds and music used in project*
-  - :file_folder: Scripts
-    - :page_facing_up: *scripts used in project*
+  - :file_folder: _for_readme - :page_facing_up: *files for readme*
+  - :file_folder: Images - :page_facing_up: *images used in the project*
+  - :file_folder: Sound - :page_facing_up: *sounds and music used in project*
+  - :file_folder: Scripts - :page_facing_up: *scripts used in project*
   - :file_folder: Styles
     - :page_facing_up: *css files compiled from scss by prepros*
-    - :file_folder: scss
-      - :page_facing_up: *sccs files*
+    - :file_folder: scss - :page_facing_up: *sccs files*
 
 ----------------------------------
 
