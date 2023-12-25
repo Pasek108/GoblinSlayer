@@ -60,6 +60,8 @@ Programs:
 - Game over screen and game restart without reloading the page
 - Mute/unmute the sound
 
+<br>
+
 > [!NOTE]  
 > Room for improvements:
 > - Choosing the hero appearance for achievements
