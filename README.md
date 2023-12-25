@@ -46,7 +46,7 @@ Libraries:
   
 Programs:
 - [VSCode](https://code.visualstudio.com)
-- [Prepros](https://prepros.io) (auto preview, processing scss, project organization)
+- [Prepros](https://prepros.io) (auto preview, processing scss)
   
 ----------------------------------
 
