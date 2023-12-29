@@ -109,7 +109,7 @@ This section is a general description of the project required to understand how 
 
 ### User interface
 #### Main menu
-![main menu](/_for_readme/main_menu.png)
+![main menu](/_for_readme/menu.png)
 Main menu has:
 - Animated snow background
 - Mute/unmute sound button
@@ -155,7 +155,7 @@ Credits page contains 2 sections with links for resources used in the project an
 ----------------------------------
 
 #### Game
-![in game](/_for_readme/in_game.png)
+![in game](/_for_readme/game.png)
 At the top of the game view are wave and killed goblins counters and at the bottom is an instruction on what keys are used to play the game.
 
 The way the game works is simple:
