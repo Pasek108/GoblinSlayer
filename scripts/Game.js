@@ -15,8 +15,8 @@ class Game {
     this.container.height = 768
     this.ctx.translate(this.container.width / 2, 0)
 
-    this.game_music = new Audio("Sound/game_music.mp3")
-    this.game_over_music = new Audio("Sound/game_over.mp3")
+    this.game_music = new Audio("sound/game_music.mp3")
+    this.game_over_music = new Audio("sound/game_over.mp3")
 
     this.background = new Image()
     this.background.src = "Images/game_background.png"

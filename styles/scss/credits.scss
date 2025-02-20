@@ -133,12 +133,109 @@
 }
 
 .credits .footer {
+  @include flex(column, center, flex-start);
+  gap: 1rem;
   width: 100vw;
   margin-top: -5rem;
   font-family: "Grenze Gotisch", cursive;
   font-size: 1.25rem;
   text-align: center;
   font-weight: bold;
+
+  a {
+    margin-top: -1.5rem;
+  }
+
+  .contact-open {
+    width: 12rem;
+    font-size: 1.125rem;
+
+    &::before,
+    &::after {
+      content: "";
+      @include position(absolute, 0.35rem, $zindex: -1);
+      background: #15161aaa;
+      height: 1.79rem;
+      width: 1.79rem;
+      transform-origin: center;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      left: -0.98rem;
+      border-bottom: 1px solid white;
+      border-left: 1px solid white;
+      background: #2f3136;
+    }
+
+    &::after {
+      right: -0.98rem;
+      border-top: 1px solid white;
+      border-right: 1px solid white;
+      background: #2f3136;
+    }
+
+    .dot-left,
+    .dot-right {
+      @include position(absolute, calc(50% - 5px));
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
+    }
+
+    .dot-left {
+      left: -5px;
+    }
+
+    .dot-right {
+      right: -5px;
+    }
+  }
+}
+
+.contact-container {
+  @include position(fixed, 0, $left: 0, $zindex: 9999);
+  @include flex(row, center, center);
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+
+  .contact-content {
+    position: relative;
+    @include flex(row, center, center);
+    width: 92vw;
+    height: 90vh;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background: white;
+    overflow: hidden;
+
+    .contact-close {
+      @include position(absolute, 1rem, 2rem);
+      @include flex(row, center, center);
+      width: 3rem;
+      height: 2.75rem;
+      padding-top: 0.125rem;
+      border: 3px solid;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      color: black;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 2.25rem;
+      background-color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: 625px) {
