@@ -3,7 +3,7 @@
 class Goblin {
   constructor(canvas_w, canvas_h, id, side, speed) {
     this.img = new Image()
-    this.img.src = "Images/goblin.png"
+    this.img.src = "images/goblin.png"
     this.size = { w: 65, h: 80 }
     this.pos = { x: 0, y: canvas_h - 185 }
     this.side = side

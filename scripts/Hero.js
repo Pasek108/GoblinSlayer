@@ -3,7 +3,7 @@
 class Hero {
   constructor(canvas_w, canvas_h) {
     this.img = new Image()
-    this.img.src = "Images/hero.png"
+    this.img.src = "images/hero.png"
     this.size = { w: 124, h: 124 }
     this.pos = { x: -this.size.w / 2, y: canvas_h - 220 }
     this.side = 0

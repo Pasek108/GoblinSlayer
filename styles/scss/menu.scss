@@ -13,7 +13,7 @@
 
 .menu {
   @include flex(column, center, center);
-  background-image: url("../Images/menu_background.png");
+  background-image: url("../images/menu_background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

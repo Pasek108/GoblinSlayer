@@ -19,7 +19,7 @@ class Game {
     this.game_over_music = new Audio("sound/game_over.mp3")
 
     this.background = new Image()
-    this.background.src = "Images/game_background.png"
+    this.background.src = "images/game_background.png"
 
     this.hero = new Hero(this.container.width, this.container.height)
     this.goblins = [new Goblin(this.container.width, this.container.height, 0, +(Math.random() > 0.5), 3)]
