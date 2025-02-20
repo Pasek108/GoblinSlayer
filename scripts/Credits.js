@@ -13,7 +13,7 @@ class Credits {
     this.contact_open_button = document.querySelector(".contact-open")
     this.contact_open_button.addEventListener("click", this.showContactForm.bind(this))
 
-    this.contact_close_button = this.container.querySelector(".contact-close")
+    this.contact_close_button = this.contact_container.querySelector(".contact-close")
     this.contact_close_button.addEventListener("click", this.hideContactForm.bind(this))
   }
 
