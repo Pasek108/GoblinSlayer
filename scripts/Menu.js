@@ -6,10 +6,10 @@ class Menu {
   constructor() {
     this.contianer = document.querySelector(".menu")
 
-    this.option_select_sound = new Audio("Sound/menu_selection.wav")
+    this.option_select_sound = new Audio("sound/menu_selection.wav")
     this.option_select_sound.volume = 0.7
 
-    this.menu_music = new Audio("Sound/menu_music.mp3")
+    this.menu_music = new Audio("sound/menu_music.mp3")
     this.menu_music.loop = true
     window.addEventListener("DOMContentLoaded", () => this.menu_music.play())
     window.addEventListener("click", () => (this.menu_music.currentTime == 0 ? this.menu_music.play() : ""))

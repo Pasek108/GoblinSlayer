@@ -11,7 +11,7 @@ class Goblin {
     this.frame = 0
     this.killed = false
 
-    this.death_sound = new Audio("Sound/goblin_death.mp3")
+    this.death_sound = new Audio("sound/goblin_death.mp3")
     if (Menu.is_sound_muted) this.death_sound.volume = 0
     else this.death_sound.volume = 0.5
 
