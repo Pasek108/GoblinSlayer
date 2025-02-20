@@ -33,7 +33,7 @@
 # Overview :sparkles:
 
 ## About
-Arcade game where player have to survive increasing waves of goblins in one attempt. 
+Arcade game where player have to survive increasing waves of goblins in one attempt. It is an improved version of my old project from technical school. The game features improved visuals and sound, as well as achievements and a credits section.
 
 Check out the [live version](https://pasek108.github.io/GoblinSlayer/) of this project.
 
