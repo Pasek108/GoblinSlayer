@@ -156,7 +156,22 @@ Achievements has 3 levels to complete and 4 possible stages:
 
 ### Credits
 ![credits](/_for_readme/UI/credits.png)
-Credits page contains 2 sections with links for resources used in the project and link to my github
+Credits page contains 2 sections with links for resources used in the project, button for contact form and link to my portfolio.
+
+<br>
+
+![contact](/_for_readme/UI/contact.png)
+A contact form is provided as a Google Forms iframe because it’s the best free solution I could think of.
+
+Users must provide:
+- Purpose of contact
+- Message
+- Captcha code
+
+Users can optionally provide:
+- Rating of the project
+- E-mail - in case a response is needed
+- Name - to address them properly in case of a follow-up
 
 ----------------------------------
 
