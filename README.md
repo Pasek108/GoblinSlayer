@@ -97,6 +97,7 @@ To edit this program:
 - [Game background floor](https://lil-cthulhu.itch.io/pixel-art-tileset-cave)
 - [Hero sprite](https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/)
 - [Goblin sprite](https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/)
+- [Favicon](https://www.iconarchive.com/show/fluentui-emoji-flat-icons-by-microsoft/Crossed-Swords-Flat-icon.html)
 
 ### Music and sounds
 - [Menu music](https://opengameart.org/content/fantasy-music-the-wraiths-of-winter)
