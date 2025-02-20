@@ -1,64 +1,73 @@
-# GoblinSlayer Readme
+<h1 align="center">GoblinSlayer - Readme</h1>
+<p align="center">
+  <strong>
+    Arcade game where player have to survive increasing waves of goblins in one attempt
+  </strong>
+</p>
+<div align="center">
+  <img src="_for_readme/banner.png?">
+</div>
+
+<br>
+
 <details>
-  <summary>❓Why sounds starts playing after first click and not when I open the page❓</summary>
-  It's because auto playing sounds is blocked by browser until the user interact with the document.
-</details>
-<details>
-  <summary>❓Why my commits often have no names and I'm not using branches❓</summary>
-  <ul>
-    <li>I often create with bursts many things at once</li>
-    <li>I don't plan things ahead, I just create things that seems good at that moment</li>
-    <li>Sometimes I have bad internet connection and it is troublesome to send commits</li>
-    <li>I'm coding alone so creating branches and describing commits is not useful for me</li>
-  <ul>
+  <summary>❓Why does sound start playing after the first click and not when I open the page?❓</summary>
+  This happens because autoplaying sounds are blocked by the browser until the user interacts with the document.
 </details>
 
-## Table of Contents
-* [Informations](#informations)
-  * [Technologies](#technologies)
+
+# Table of Contents
+* [Overview :sparkles:](#overview-sparkles)
+  * [About](#about)
   * [Features](#features)
+  * [Technologies](#technologies)
   * [Setup](#setup)
   * [Acknowledgements](#acknowledgements)
-* [Details](#details)
+* [Details :scroll:](#details-scroll)
   * [User interface](#user-interface)
   * [Project structure](#project-structure)
   * [Code organization](#code-organization)
 
 <br>
 
-## Informations
-Arcade game where player have to survive increasing waves of goblins in one attempt. <br>
-See the [live demo](https://pasek108.github.io/GoblinSlayer/).
+# Overview :sparkles:
+
+## About
+Arcade game where player have to survive increasing waves of goblins in one attempt. 
+
+Check out the [live version](https://pasek108.github.io/GoblinSlayer/) of this project.
+
+<br>
 
 ![preview](/_for_readme/preview.png)
 
-----------------------------------
-
-### Technologies
+## Technologies
 Languages:
 - HTML
-- [SCSS](https://sass-lang.com)
+- CSS
 - JS
   
 Libraries:
+- [SCSS](https://sass-lang.com)
 - [FontAwesome](https://fontawesome.com) 6.2.1
 - [GoogleFonts](https://fonts.google.com)
   
 Programs:
 - [VSCode](https://code.visualstudio.com)
-- [Prepros](https://prepros.io) (auto preview, processing scss)
-  
-----------------------------------
+- [Prepros](https://prepros.io)
+- [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
+- [ShareX](https://getsharex.com)
+- [GIMP](https://www.gimp.org)
 
-### Features
-- Nice and consistent UI
-- Animated menu background
-- Achievements with 3 levels of completion
-- Good looking credits view
-- Generating increasingly larger and faster waves of goblins
-- Counting and saving survived waves, killed goblins and time spent in game
-- Game over screen and game restart without reloading the page
-- Mute/unmute the sound
+## Features
+- Nice and consistent UI  
+- Animated menu background  
+- Achievements with three levels of completion  
+- Well-designed credits view  
+- Increasingly larger and faster waves of goblins  
+- Tracking and saving survived waves, defeated goblins, and time spent in the game  
+- Game over screen and the ability to restart without reloading the page  
+- Mute/unmute sound option  
 
 <br>
 
@@ -67,9 +76,7 @@ Programs:
 > - Choosing the hero appearance for achievements
 > - Fixing fps problem (game gets faster or slower depending on device framerate)
 
-----------------------------------
-
-### Setup
+## Setup
 Ways to run this program: 
 1. Use the [live demo](https://pasek108.github.io/GoblinSlayer/)
 2. Download this repo and run index.html file
@@ -81,10 +88,8 @@ To edit this program:
 - Add this project in Prepros
 - Start coding
 
-----------------------------------
-
-### Acknowledgements
-#### Images
+## Acknowledgements
+### Images
 - [Menu background](https://i.imgur.com/LAFEmei.png)
 - [Achievement ribbon](https://svgsilh.com/image/1093181.html)
 - [Achievement star](https://svgsilh.com/image/775819.html)
@@ -93,7 +98,7 @@ To edit this program:
 - [Hero sprite](https://www.spriters-resource.com/ds_dsi/rondoofswords/sheet/42664/)
 - [Goblin sprite](https://www.spriters-resource.com/psp/lunarsilverstarharmony/sheet/58114/)
 
-#### Music and sounds
+### Music and sounds
 - [Menu music](https://opengameart.org/content/fantasy-music-the-wraiths-of-winter)
 - [Menu option select](https://opengameart.org/content/menu-selection-click)
 - [Game music 1](https://opengameart.org/content/massacre-soundtrack)
@@ -104,11 +109,11 @@ To edit this program:
 
 <br>
 
-## Details
-This section is a general description of the project required to understand how it works, the exact details are in the code or simply are the code.
 
-### User interface
-#### Main menu
+# Details :scroll:
+
+## User interface
+### Main menu
 ![main menu](/_for_readme/menu.png)
 Main menu has:
 - Animated snow background
@@ -120,7 +125,7 @@ Main menu has:
 
 ----------------------------------
 
-#### Achievements
+### Achievements
 ![achievements](/_for_readme/achievements.png)
 Achievements view shows achievements, each of which has:
 - Title ribbon
@@ -148,13 +153,13 @@ Achievements has 3 levels to complete and 4 possible stages:
 
 ----------------------------------
 
-#### Credits
+### Credits
 ![credits](/_for_readme/credits.png)
 Credits page contains 2 sections with links for resources used in the project and link to my github
 
 ----------------------------------
 
-#### Game
+### Game
 ![in game](/_for_readme/game.png)
 At the top of the game view are wave and killed goblins counters and at the bottom is an instruction on what keys are used to play the game.
 
@@ -167,14 +172,12 @@ The way the game works is simple:
 
 ----------------------------------
 
-#### Game over
+### Game over
 ![game over](/_for_readme/game_over.png)
 Game over view displays survived waves, killed goblins and button that goes back to main menu
 
-----------------------------------
 
-### Project structure
-The project directory tree looks like this:
+## Project structure
 - :file_folder: GoblinSlayer (project folder)
   - :page_facing_up: *github and prepros config*
   - :page_facing_up: *readme file*
@@ -187,9 +190,8 @@ The project directory tree looks like this:
     - :page_facing_up: *css files compiled from scss by prepros*
     - :file_folder: scss - :page_facing_up: *sccs files*
 
-----------------------------------
 
-### Code organization
+## Code organization
 
 ![program diagram](/_for_readme/program_diagram.png)
 
